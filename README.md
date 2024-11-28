@@ -15,6 +15,7 @@ params:
 3. mvn exec:java to run the code.
 
 Example cURLs:
+
 curl --location 'http://localhost:8080/api/chat' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'documentId=db9299df-b07f-4329-8bc6-0a6d224271b6' \
