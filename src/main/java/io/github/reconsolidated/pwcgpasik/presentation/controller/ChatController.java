@@ -30,6 +30,9 @@ public class ChatController {
             @RequestParam String documentId,
             @RequestParam String question
     ) {
+        if (question == null || question.isEmpty()) {
+            throw new IllegalArgumentException("Question must not be empty.");
+        }
         UUID documentUuid = UUID.fromString(documentId);
         String answer = chatService.getAnswer(documentUuid, question);
         ChatResponse response = new ChatResponse(answer, documentUuid);

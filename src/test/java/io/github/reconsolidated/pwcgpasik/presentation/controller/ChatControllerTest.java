@@ -49,7 +49,7 @@ class ChatControllerIntegrationTest {
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.answer").value(answer))
-                .andExpect(jsonPath("$.responseTime").exists());
+                .andExpect(jsonPath("$.documentId").exists());
     }
 
     @Test
@@ -110,7 +110,7 @@ class ChatControllerIntegrationTest {
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.answer").value("Large question processed"))
-                .andExpect(jsonPath("$.responseTime").exists());
+                .andExpect(jsonPath("$.documentId").exists());
     }
 
     @Test
